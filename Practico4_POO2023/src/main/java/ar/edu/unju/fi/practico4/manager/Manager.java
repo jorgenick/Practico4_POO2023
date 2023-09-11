@@ -41,15 +41,17 @@ public class Manager {
 
 	}
 
-	public static void registrarReserva() {
+	public static Reserva registrarReserva(Reserva reserva) {
 		cargarListas();
 
-		Reserva reserva = new Reserva(listaOrigen.get(3), listaDestino.get(3), "2000-06-17", "2010-07-01",
+		 reserva = new Reserva(listaOrigen.get(3), listaDestino.get(3), "2000-06-17", "2010-07-01",
 				listaClase.get(0),
 				new Pasajero(listaNombresApellidos.get(1), 1545858525, 58222555, "jtolababsd@gmail.com", null),
 				"Reservada");
 
 		System.out.println(reserva);
+		
+		return reserva;
 
 	}
 
@@ -72,5 +74,15 @@ public class Manager {
 
 		return listaEstado;
 	}
+	
+	public static Reserva buscarReserva(String nombre) {
+		
+	for (Reserva reservaBuscada : listaReservas) 
+		if (reservaBuscada.getPasajero().getNombreApellido().equalsIgnoreCase(nombre)) 
+			return reservaBuscada;
+		
+		return null;
+	}
+	
 
 }

@@ -8,7 +8,6 @@ public class Principal {
 		
 		Manager manager = new Manager ();
 		
-		manager.registrarReserva();
 		
 
 	}
