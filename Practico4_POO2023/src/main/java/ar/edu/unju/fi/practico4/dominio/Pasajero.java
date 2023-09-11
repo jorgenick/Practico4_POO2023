@@ -6,18 +6,20 @@ public class Pasajero {
 	private long telefono;
 	private long dni;
 	private String correo;
+	private Pasajero acompaniante;
 	
 	
 	public Pasajero() {
 		super();
 	}
 
-	public Pasajero(String nombreApellido, long telefono, long dni, String correo) {
+	public Pasajero(String nombreApellido, long telefono, long dni, String correo,Pasajero acompaniante) {
 		super();
 		this.nombreApellido = nombreApellido;
 		this.telefono = telefono;
 		this.dni = dni;
 		this.correo = correo;
+		this.acompaniante = acompaniante;
 	}
 
 	public String getNombreApellido() {
@@ -51,11 +53,20 @@ public class Pasajero {
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
+	
+	public Pasajero getAcompaniante() {
+		return acompaniante;
+	}
+	
+	public void setAcompaniante(Pasajero acompaniante) {
+		this.acompaniante = acompaniante;
+	}
+	
 
 	@Override
 	public String toString() {
-		return "Pasajero [nombreApellido=" + nombreApellido + ", telefono=" + telefono + ", dni=" + dni + ", correo="
-				+ correo + "]";
+		return " \n	nombreApellido = " + nombreApellido + "\n	telefono = " + telefono + "\n	dni = " + dni + "\n 	correo = "
+				+ correo + "\n 	acompañante = "+acompaniante;
 	}
 	
 	

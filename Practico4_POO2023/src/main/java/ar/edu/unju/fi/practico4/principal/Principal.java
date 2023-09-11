@@ -9,7 +9,6 @@ public class Principal {
 		Manager manager = new Manager ();
 		
 		manager.registrarReserva();
-		// TODO Auto-generated method stub
 		
 
 	}

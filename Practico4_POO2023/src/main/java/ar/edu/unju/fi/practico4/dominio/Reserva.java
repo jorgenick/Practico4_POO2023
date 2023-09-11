@@ -84,8 +84,8 @@ public class Reserva {
 
 	@Override
 	public String toString() {
-		return "Reserva [origen = " + origen + ", destino = " + destino + ", fechaSalida = " + fechaSalida + ", fechaRegreso = "
-				+ fechaRegreso + ", clase = " + clase + ", pasajero = " + pasajero + ", estado = " + estado + "]";
+		return "Reserva \n origen = " + origen + "\n destino = " + destino + "\n fechaSalida = " + fechaSalida + "\n fechaRegreso = "
+				+ fechaRegreso + "\n clase = " + clase + "\n pasajero = " + pasajero + "\n estado = " + estado;
 	}
 	
 }
