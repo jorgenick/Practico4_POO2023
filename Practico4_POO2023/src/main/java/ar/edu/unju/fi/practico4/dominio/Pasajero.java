@@ -1,5 +1,5 @@
 package ar.edu.unju.fi.practico4.dominio;
-
+//dd
 public class Pasajero {
 	
 	private String nombreApellido;
