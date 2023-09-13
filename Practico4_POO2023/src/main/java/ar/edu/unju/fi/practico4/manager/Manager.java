@@ -34,7 +34,7 @@ public class Manager {
 		listaClase.add("Economy");
 		listaClase.add("Business");
 
-		listaNombresApellidos.add("JORGE T0LABA");
+		listaNombresApellidos.add("juan perez");
 		listaNombresApellidos.add("FRANCO TOLABA");
 		listaNombresApellidos.add("DIEGO TOLABA");
 		listaNombresApellidos.add("JUAN TOLABA");
@@ -80,9 +80,29 @@ public class Manager {
 	for (Reserva reservaBuscada : listaReservas) 
 		if (reservaBuscada.getPasajero().getNombreApellido().equalsIgnoreCase(nombre)) 
 			return reservaBuscada;
-		
+			
 		return null;
 	}
+	
+	
+	public static void cancelarReserva(Reserva reserva) {
+		
+		reserva.setEstado("Canselado");
+	}
+	
+	public static void pagarReserva (Reserva reserva) {
+		reserva.setEstado("Pagado");
+	}
+	
+	public static List obtenerListaEstado (String estado, List<Reserva> listaCargada){
+		List <Reserva> nuevaListaReservas = new ArrayList<Reserva>();
+		
+		for (Reserva res : listaCargada) 
+			if (res.getEstado().equals(estado)) 
+				nuevaListaReservas.add(res);
+			
+		return nuevaListaReservas;
+		}
 	
 
 }
