@@ -1,7 +1,9 @@
 package ar.edu.unju.fi.practico4.dominio;
 
 public class Reserva {
-	
+	/**
+	 * atributos de la clase reserva tipos de datos primivos
+	 */
 	private String origen;
 	private String destino;
 	private String fechaSalida;
@@ -9,22 +11,38 @@ public class Reserva {
 	private String clase;
 	private Pasajero pasajero;
 	private String estado;
-	
+
+	/**
+	 * constructor
+	 */
 	public Reserva() {
 	}
-	
-	public Reserva(String origen,String destino,String fechaSalida,
-			String fechaRegreso,String clase,Pasajero pasajero,String estado) {
-		
-		this.origen= origen;
-		this.destino= destino;
+
+	/**
+	 * constructor sobrecargado
+	 * 
+	 * @param origen
+	 * @param destino
+	 * @param fechaSalida
+	 * @param fechaRegreso
+	 * @param clase
+	 * @param pasajero
+	 * @param estado
+	 */
+	public Reserva(String origen, String destino, String fechaSalida, String fechaRegreso, String clase,
+			Pasajero pasajero, String estado) {
+
+		this.origen = origen;
+		this.destino = destino;
 		this.fechaSalida = fechaSalida;
 		this.fechaRegreso = fechaRegreso;
 		this.clase = clase;
-		this.pasajero= pasajero;
+		this.pasajero = pasajero;
 		this.estado = estado;
-		
+
 	}
+
+	// METODOS GETERS Y SETERS
 
 	public String getOrigen() {
 		return origen;
@@ -84,8 +102,9 @@ public class Reserva {
 
 	@Override
 	public String toString() {
-		return "Reserva \n origen = " + origen + "\n destino = " + destino + "\n fechaSalida = " + fechaSalida + "\n fechaRegreso = "
-				+ fechaRegreso + "\n clase = " + clase + "\n pasajero = " + pasajero + "\n estado = " + estado;
+		return "Reserva \n origen = " + origen + "\n destino = " + destino + "\n fechaSalida = " + fechaSalida
+				+ "\n fechaRegreso = " + fechaRegreso + "\n clase = " + clase + "\n pasajero = " + pasajero
+				+ "\n estado = " + estado;
 	}
-	
+
 }

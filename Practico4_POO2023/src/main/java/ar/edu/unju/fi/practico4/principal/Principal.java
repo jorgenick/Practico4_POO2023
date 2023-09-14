@@ -5,11 +5,8 @@ import ar.edu.unju.fi.practico4.manager.Manager;
 public class Principal {
 
 	public static void main(String[] args) {
-		
-		Manager manager = new Manager ();
-		
-		
 
+		Manager manager = new Manager();
 	}
 
 }

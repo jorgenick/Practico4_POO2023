@@ -1,19 +1,32 @@
 package ar.edu.unju.fi.practico4.dominio;
-//dd
+
 public class Pasajero {
-	
+	/**
+	 * atributos de la clase acopañante
+	 */
 	private String nombreApellido;
 	private long telefono;
 	private long dni;
 	private String correo;
 	private Pasajero acompaniante;
-	
-	
+
+	/**
+	 * constructor
+	 */
 	public Pasajero() {
 		super();
 	}
 
-	public Pasajero(String nombreApellido, long telefono, long dni, String correo,Pasajero acompaniante) {
+	/**
+	 * constructor sobrecargado
+	 * 
+	 * @param nombreApellido
+	 * @param telefono
+	 * @param dni
+	 * @param correo
+	 * @param acompaniante
+	 */
+	public Pasajero(String nombreApellido, long telefono, long dni, String correo, Pasajero acompaniante) {
 		super();
 		this.nombreApellido = nombreApellido;
 		this.telefono = telefono;
@@ -21,6 +34,8 @@ public class Pasajero {
 		this.correo = correo;
 		this.acompaniante = acompaniante;
 	}
+
+	// METODOS GETERS Y SETERS
 
 	public String getNombreApellido() {
 		return nombreApellido;
@@ -53,23 +68,23 @@ public class Pasajero {
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
-	
+
 	public Pasajero getAcompaniante() {
 		return acompaniante;
 	}
-	
+
 	public void setAcompaniante(Pasajero acompaniante) {
 		this.acompaniante = acompaniante;
 	}
-	
+
+	/**
+	 * metodo to string
+	 */
 
 	@Override
 	public String toString() {
-		return " \n	nombreApellido = " + nombreApellido + "\n	telefono = " + telefono + "\n	dni = " + dni + "\n 	correo = "
-				+ correo + "\n 	acompañante = "+acompaniante;
+		return " \n	nombreApellido = " + nombreApellido + "\n	telefono = " + telefono + "\n	dni = " + dni
+				+ "\n 	correo = " + correo + "\n 	acompañante = " + acompaniante;
 	}
-	
-	
-	
-	
+
 }

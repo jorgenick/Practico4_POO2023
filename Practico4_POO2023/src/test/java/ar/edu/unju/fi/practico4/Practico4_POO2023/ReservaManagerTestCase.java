@@ -20,7 +20,6 @@ import ar.edu.unju.fi.practico4.manager.Manager;
 @DisplayName("Test Jorge")
 class ReservaManagerTestCase {
 
-	static Reserva reserva1;
 	static Reserva reserva2;
 	static Reserva reserva3;
 	static Reserva reserva4;
@@ -36,8 +35,6 @@ class ReservaManagerTestCase {
 		reservaManager = new Manager();
 		reservaManager.cargarListas();
 
-//		reserva1 = reservaManager.registrarReserva(reserva1);
-
 		// se carga previamente una reserva sin acompañante
 		reserva2 = new Reserva(reservaManager.listaOrigen.get(3), reservaManager.listaDestino.get(3), "2000-06-17",
 				"2010-07-01", reservaManager.listaClase.get(0),
@@ -52,25 +49,25 @@ class ReservaManagerTestCase {
 						new Pasajero(reservaManager.listaNombresApellidos.get(2), 1545858525, 58222555,
 								"jtolababsd@gmail.com", null)),
 				"Reservada");
-
+		// se carga previamente una reserva sin acompañante
 		reserva4 = new Reserva(reservaManager.listaOrigen.get(3), reservaManager.listaDestino.get(3), "2000-06-17",
 				"2010-07-01", reservaManager.listaClase.get(0),
 				new Pasajero(reservaManager.listaNombresApellidos.get(1), 1545858525, 58222555, "jtolababsd@gmail.com",
 						null),
 				"Reservada");
-
+		// se carga previamente una reserva sin acompañante
 		reserva5 = new Reserva(reservaManager.listaOrigen.get(3), reservaManager.listaDestino.get(3), "2000-06-17",
 				"2010-07-01", reservaManager.listaClase.get(0),
 				new Pasajero(reservaManager.listaNombresApellidos.get(1), 1545858525, 58222555, "jtolababsd@gmail.com",
 						null),
 				"Reservada");
-
+		// se carga previamente una reserva sin acompañante
 		reserva6 = new Reserva(reservaManager.listaOrigen.get(3), reservaManager.listaDestino.get(3), "2000-06-17",
 				"2010-07-01", reservaManager.listaClase.get(0),
 				new Pasajero(reservaManager.listaNombresApellidos.get(1), 1545858525, 58222555, "jtolababsd@gmail.com",
 						null),
 				"Canselado");
-
+		// se carga previamente una reserva sin acompañante
 		reserva7 = new Reserva(reservaManager.listaOrigen.get(3), reservaManager.listaDestino.get(3), "2000-06-17",
 				"2010-07-01", reservaManager.listaClase.get(0),
 				new Pasajero(reservaManager.listaNombresApellidos.get(1), 1545858525, 58222555, "jtolababsd@gmail.com",
@@ -81,7 +78,6 @@ class ReservaManagerTestCase {
 	@AfterEach
 	void tearDown() throws Exception {
 		System.out.println("Limpiando variables de jorge...");
-		reserva1 = null;
 		reserva2 = null;
 		reserva3 = null;
 		reserva4 = null;
@@ -113,7 +109,6 @@ class ReservaManagerTestCase {
 	void agregarReservaAcompanianteTest() {
 		System.out.println("iniciando prueba de registro de reserva con acompañante");
 		reservaManager.agregarReserva(reserva3);
-		System.out.println("pasajero de reserva: " + reserva3.getPasajero().getNombreApellido());
 		Reserva reservaBuscada = reservaManager.buscarReserva("juan perez");
 		assertNotNull(reservaBuscada);
 		assertNotNull(reservaBuscada.getPasajero().getAcompaniante());
